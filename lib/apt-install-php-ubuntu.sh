@@ -2,6 +2,8 @@
 
 set -eo pipefail
 
+apt-get update && apt-get install -y lsb-release && apt-get clean all
+
 release=$(lsb_release -cs)
 version=$1
 
